@@ -6,14 +6,13 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    #image: andreabreu76/debian_developer
-    container_name: Sistema-Ivory
+    container_name: Sistema-yourClientName
     volumes:
       - ./home/:/home/
     stdin_open: true
     tty: true
     restart: always
-    hostname: Ivory
+    hostname: yourClientName
     environment:
       - DEBIAN_FRONTEND=noninteractive
       - DEBCONF_NONINTERACTIVE_SEEN=true
