@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+
+  # The Application
+  debian-base:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    #image: andreabreu76/debian_developer
+    container_name: Sistema-Ivory
+    volumes:
+      - ./home/:/home/
+    stdin_open: true
+    tty: true
+    restart: always
+    hostname: Ivory
+    environment:
+      - DEBIAN_FRONTEND=noninteractive
+      - DEBCONF_NONINTERACTIVE_SEEN=true
+      - DEBIAN_PRIORITY=critical
+      - DEBCONF_PRIORITY=critical
