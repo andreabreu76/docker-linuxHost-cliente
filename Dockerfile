@@ -5,11 +5,11 @@ LABEL version="0.1"
 LABEL description="Este é um Linux para desenvolvimento"
 
 #ARG DEBIAN_FRONTEND=noninteractive
-ARG HOSTNAME=Ivory
-ARG USER=andreabreu
-ARG USERNAME="Andre Abreu"
-ARG USERMAIL="consultoria.aabreu@grupoivory.com.br"
-ARG PASSWORD="123@mudar"
+ARG HOSTNAME=yourClientName
+ARG USER=yourUserName
+ARG USERNAME="Your Name"
+ARG USERMAIL="Your email address"
+ARG PASSWORD="A basic password"
 
 # Basics
 RUN apt update && apt -y upgrade 
